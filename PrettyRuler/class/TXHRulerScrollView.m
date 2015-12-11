@@ -53,7 +53,7 @@
             CGPathAddLineToPoint(pathRef1, NULL, DISTANCELEFTANDRIGHT + DISTANCEVALUE * i, self.rulerHeight - DISTANCETOPANDBOTTOM - textSize.height - 20);
         }
     }
-
+    
     shapeLayer1.path = pathRef1;
     shapeLayer2.path = pathRef2;
     
@@ -64,16 +64,16 @@
     
     // 开启最小模式
     if (_mode) {
-        UIEdgeInsets edge = UIEdgeInsetsMake(0, self.rulerWidth / 2 - DISTANCELEFTANDRIGHT, 0, self.rulerWidth / 2 - DISTANCELEFTANDRIGHT);
+        UIEdgeInsets edge = UIEdgeInsetsMake(0, self.rulerWidth / 2.f - DISTANCELEFTANDRIGHT, 0, self.rulerWidth / 2.f - DISTANCELEFTANDRIGHT);
         self.contentInset = edge;
-        self.contentOffset = CGPointMake(DISTANCEVALUE * self.rulerValue - self.rulerWidth + (self.rulerWidth / 2 + DISTANCELEFTANDRIGHT), 0);
+        self.contentOffset = CGPointMake(DISTANCEVALUE * self.rulerValue - self.rulerWidth + (self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT), 0);
     }
     else
     {
-        self.contentOffset = CGPointMake(DISTANCEVALUE * self.rulerValue - self.rulerWidth / 2 + DISTANCELEFTANDRIGHT, 0);
+        self.contentOffset = CGPointMake(DISTANCEVALUE * self.rulerValue - self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT, 0);
     }
     
-    self.contentSize = CGSizeMake(self.rulerCount * DISTANCEVALUE + DISTANCELEFTANDRIGHT * 2, self.rulerHeight);
+    self.contentSize = CGSizeMake(self.rulerCount * DISTANCEVALUE + DISTANCELEFTANDRIGHT * 2.f, self.rulerHeight);
 }
 
 @end
