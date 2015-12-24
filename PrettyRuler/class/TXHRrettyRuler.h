@@ -19,6 +19,13 @@
 
 @property (nonatomic, assign) id <TXHRrettyRulerDelegate> rulerDeletate;
 
+/*
+*  count * average = 刻度最大值
+*  @param count        10个小刻度为一个大刻度，大刻度的数量
+*  @param average      每个小刻度的值
+*  @param currentValue 直尺初始化的刻度值
+*  @param mode         是否最小模式
+*/
 - (void)showRulerScrollViewWithCount:(NSUInteger)count
                              average:(CGFloat)average
                         currentValue:(CGFloat)currentValue
