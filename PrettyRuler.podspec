@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #  s.source_files  = "Classes", "Classes/**/*.{h,m}"
 
   s.source       = { :git => "https://github.com/804145113/PrettyRuler.git", :tag => "2.0.0" }
-  s.source_files  = 'PrettyRuler/PrettyRulerClass/*'
+  s.source_files  = "PrettyRuler/**/*"
 
   #  s.exclude_files = "Classes/Exclude"
 
