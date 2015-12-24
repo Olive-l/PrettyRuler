@@ -31,7 +31,8 @@
                         currentValue:(CGFloat)currentValue
                            smallMode:(BOOL)mode {
     
-    NSAssert(rulerScrollView != nil, @"*****调用此方法前，请先调用 initWithFrame:(CGRect)frame 方法初始化对象 rulerScrollView");
+    NSAssert(rulerScrollView != nil, @"***** 调用此方法前，请先调用 initWithFrame:(CGRect)frame 方法初始化对象 rulerScrollView\n");
+    NSAssert(currentValue < average * count, @"***** currentValue 不能大于直尺最大值（count * average）\n");
     
     rulerScrollView.rulerAverage = average;
     rulerScrollView.rulerCount = count;
@@ -66,6 +67,14 @@
         scrollView.mode = NO;
         [self.rulerDeletate txhRrettyRuler:scrollView];
     }
+}
+
+- (void)scrollViewWillEndDragging:(TXHRulerScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    NSLog(@"targetContentOffset:%@",NSStringFromCGPoint(*targetContentOffset));
+    CGPoint offSet = *targetContentOffset;
+    CGFloat offSetX = offSet.x + self.frame.size.width / 2 - DISTANCELEFTANDRIGHT;
+    CGFloat ruleValue = (offSetX / DISTANCEVALUE) * scrollView.rulerAverage;
+    NSLog(@"ruleValue:%f",ruleValue);
 }
 
 - (void)drawRacAndLine {

@@ -31,7 +31,7 @@
     // 2.创建 TXHRrettyRuler 对象 并设置代理对象
     TXHRrettyRuler *ruler = [[TXHRrettyRuler alloc] initWithFrame:CGRectMake(20, 220, [UIScreen mainScreen].bounds.size.width - 20 * 2, 140)];
     ruler.rulerDeletate = self;
-    [ruler showRulerScrollViewWithCount:200 average:0.1 currentValue:36.5f smallMode:YES];
+    [ruler showRulerScrollViewWithCount:200 average:0.1 currentValue:16.5f smallMode:YES];
     [self.view addSubview:ruler];
 }
 

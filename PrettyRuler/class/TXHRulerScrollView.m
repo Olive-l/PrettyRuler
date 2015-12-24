@@ -66,11 +66,11 @@
     if (_mode) {
         UIEdgeInsets edge = UIEdgeInsetsMake(0, self.rulerWidth / 2.f - DISTANCELEFTANDRIGHT, 0, self.rulerWidth / 2.f - DISTANCELEFTANDRIGHT);
         self.contentInset = edge;
-        self.contentOffset = CGPointMake(DISTANCEVALUE * self.rulerValue - self.rulerWidth + (self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT), 0);
+        self.contentOffset = CGPointMake(DISTANCEVALUE * (self.rulerValue / self.rulerAverage) - self.rulerWidth + (self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT), 0);
     }
     else
     {
-        self.contentOffset = CGPointMake(DISTANCEVALUE * self.rulerValue - self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT, 0);
+        self.contentOffset = CGPointMake(DISTANCEVALUE * (self.rulerValue / self.rulerAverage) - self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT, 0);
     }
     
     self.contentSize = CGSizeMake(self.rulerCount * DISTANCEVALUE + DISTANCELEFTANDRIGHT * 2.f, self.rulerHeight);
