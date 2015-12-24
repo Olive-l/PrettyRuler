@@ -20,7 +20,7 @@
 @property (nonatomic, assign) id <TXHRrettyRulerDelegate> rulerDeletate;
 
 - (void)showRulerScrollViewWithCount:(NSUInteger)count
-                             average:(NSUInteger)average
+                             average:(CGFloat)average
                         currentValue:(CGFloat)currentValue
                            smallMode:(BOOL)mode;
 

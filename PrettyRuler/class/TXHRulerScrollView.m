@@ -34,7 +34,7 @@
     for (int i = 0; i <= self.rulerCount; i++) {
         UILabel *rule = [[UILabel alloc] init];
         rule.textColor = [UIColor blackColor];
-        rule.text = [NSString stringWithFormat:@"%ld",i * self.rulerAverage];
+        rule.text = [NSString stringWithFormat:@"%.0f",i * self.rulerAverage];
         CGSize textSize = [rule.text sizeWithAttributes:@{ NSFontAttributeName : rule.font }];
         if (i % 10 == 0) {
             CGPathMoveToPoint(pathRef2, NULL, DISTANCELEFTANDRIGHT + DISTANCEVALUE * i , DISTANCETOPANDBOTTOM);

@@ -27,7 +27,7 @@
 }
 
 - (void)showRulerScrollViewWithCount:(NSUInteger)count
-                             average:(NSUInteger)average
+                             average:(CGFloat)average
                         currentValue:(CGFloat)currentValue
                            smallMode:(BOOL)mode {
     
@@ -53,10 +53,10 @@
 
 - (void)scrollViewDidScroll:(TXHRulerScrollView *)scrollView {
     CGFloat offSetX = scrollView.contentOffset.x + self.frame.size.width / 2 - DISTANCELEFTANDRIGHT;
-    CGFloat ruleValue = offSetX / DISTANCEVALUE;
+    CGFloat ruleValue = (offSetX / DISTANCEVALUE) * scrollView.rulerAverage;
     if (ruleValue < 0.f) {
         return;
-    } else if (ruleValue > scrollView.rulerCount) {
+    } else if (ruleValue > scrollView.rulerCount * scrollView.rulerAverage) {
         return;
     }
     if (self.rulerDeletate) {

@@ -16,7 +16,7 @@
 
 @property (nonatomic) NSUInteger rulerCount;
 
-@property (nonatomic) NSUInteger rulerAverage;
+@property (nonatomic) CGFloat rulerAverage;
 
 @property (nonatomic) NSUInteger rulerHeight;
 
