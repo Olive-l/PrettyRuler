@@ -17,6 +17,8 @@
 		A3069A7D1C1AA1780000EC2E /* PrettyRulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3069A7C1C1AA1780000EC2E /* PrettyRulerUITests.m */; };
 		A33881401C2BD9BB00451188 /* TXHRrettyRuler.m in Sources */ = {isa = PBXBuildFile; fileRef = A338813D1C2BD9BB00451188 /* TXHRrettyRuler.m */; };
 		A33881411C2BD9BB00451188 /* TXHRulerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A338813F1C2BD9BB00451188 /* TXHRulerScrollView.m */; };
+		A33881481C2BF72B00451188 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A33881461C2BF72B00451188 /* LICENSE */; };
+		A33881491C2BF72B00451188 /* PrettyRuler.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A33881471C2BF72B00451188 /* PrettyRuler.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		A338813D1C2BD9BB00451188 /* TXHRrettyRuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXHRrettyRuler.m; sourceTree = "<group>"; };
 		A338813E1C2BD9BB00451188 /* TXHRulerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXHRulerScrollView.h; sourceTree = "<group>"; };
 		A338813F1C2BD9BB00451188 /* TXHRulerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXHRulerScrollView.m; sourceTree = "<group>"; };
+		A33881461C2BF72B00451188 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		A33881471C2BF72B00451188 /* PrettyRuler.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PrettyRuler.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				A3069A631C1AA1770000EC2E /* Assets.xcassets */,
 				A3069A651C1AA1770000EC2E /* LaunchScreen.storyboard */,
 				A3069A681C1AA1770000EC2E /* Info.plist */,
+				A33881461C2BF72B00451188 /* LICENSE */,
+				A33881471C2BF72B00451188 /* PrettyRuler.podspec */,
 				A3069A571C1AA1770000EC2E /* Supporting Files */,
 			);
 			path = PrettyRuler;
@@ -264,7 +270,9 @@
 			files = (
 				A3069A671C1AA1770000EC2E /* LaunchScreen.storyboard in Resources */,
 				A3069A641C1AA1770000EC2E /* Assets.xcassets in Resources */,
+				A33881481C2BF72B00451188 /* LICENSE in Resources */,
 				A3069A621C1AA1770000EC2E /* Main.storyboard in Resources */,
+				A33881491C2BF72B00451188 /* PrettyRuler.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
