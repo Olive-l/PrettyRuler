@@ -34,7 +34,7 @@
     for (int i = 0; i <= self.rulerCount; i++) {
         UILabel *rule = [[UILabel alloc] init];
         rule.textColor = [UIColor blackColor];
-        rule.text = [NSString stringWithFormat:@"%.0f",i * self.rulerAverage];
+        rule.text = [NSString stringWithFormat:@"%.0f",i * [self.rulerAverage floatValue]];
         CGSize textSize = [rule.text sizeWithAttributes:@{ NSFontAttributeName : rule.font }];
         if (i % 10 == 0) {
             CGPathMoveToPoint(pathRef2, NULL, DISTANCELEFTANDRIGHT + DISTANCEVALUE * i , DISTANCETOPANDBOTTOM);
@@ -66,11 +66,11 @@
     if (_mode) {
         UIEdgeInsets edge = UIEdgeInsetsMake(0, self.rulerWidth / 2.f - DISTANCELEFTANDRIGHT, 0, self.rulerWidth / 2.f - DISTANCELEFTANDRIGHT);
         self.contentInset = edge;
-        self.contentOffset = CGPointMake(DISTANCEVALUE * (self.rulerValue / self.rulerAverage) - self.rulerWidth + (self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT), 0);
+        self.contentOffset = CGPointMake(DISTANCEVALUE * (self.rulerValue / [self.rulerAverage floatValue]) - self.rulerWidth + (self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT), 0);
     }
     else
     {
-        self.contentOffset = CGPointMake(DISTANCEVALUE * (self.rulerValue / self.rulerAverage) - self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT, 0);
+        self.contentOffset = CGPointMake(DISTANCEVALUE * (self.rulerValue / [self.rulerAverage floatValue]) - self.rulerWidth / 2.f + DISTANCELEFTANDRIGHT, 0);
     }
     
     self.contentSize = CGSizeMake(self.rulerCount * DISTANCEVALUE + DISTANCELEFTANDRIGHT * 2.f, self.rulerHeight);

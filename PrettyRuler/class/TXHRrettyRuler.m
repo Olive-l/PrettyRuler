@@ -27,13 +27,11 @@
 }
 
 - (void)showRulerScrollViewWithCount:(NSUInteger)count
-                             average:(CGFloat)average
+                             average:(NSNumber *)average
                         currentValue:(CGFloat)currentValue
                            smallMode:(BOOL)mode {
-    
     NSAssert(rulerScrollView != nil, @"***** 调用此方法前，请先调用 initWithFrame:(CGRect)frame 方法初始化对象 rulerScrollView\n");
-    NSAssert(currentValue < average * count, @"***** currentValue 不能大于直尺最大值（count * average）\n");
-    
+    NSAssert(currentValue < [average floatValue] * count, @"***** currentValue 不能大于直尺最大值（count * average）\n");
     rulerScrollView.rulerAverage = average;
     rulerScrollView.rulerCount = count;
     rulerScrollView.rulerValue = currentValue;
@@ -51,13 +49,12 @@
 }
 
 #pragma mark - ScrollView Delegate
-
 - (void)scrollViewDidScroll:(TXHRulerScrollView *)scrollView {
     CGFloat offSetX = scrollView.contentOffset.x + self.frame.size.width / 2 - DISTANCELEFTANDRIGHT;
-    CGFloat ruleValue = (offSetX / DISTANCEVALUE) * scrollView.rulerAverage;
+    CGFloat ruleValue = (offSetX / DISTANCEVALUE) * [scrollView.rulerAverage floatValue];
     if (ruleValue < 0.f) {
         return;
-    } else if (ruleValue > scrollView.rulerCount * scrollView.rulerAverage) {
+    } else if (ruleValue > scrollView.rulerCount * [scrollView.rulerAverage floatValue]) {
         return;
     }
     if (self.rulerDeletate) {
@@ -69,12 +66,33 @@
     }
 }
 
-- (void)scrollViewWillEndDragging:(TXHRulerScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    NSLog(@"targetContentOffset:%@",NSStringFromCGPoint(*targetContentOffset));
-    CGPoint offSet = *targetContentOffset;
-    CGFloat offSetX = offSet.x + self.frame.size.width / 2 - DISTANCELEFTANDRIGHT;
-    CGFloat ruleValue = (offSetX / DISTANCEVALUE) * scrollView.rulerAverage;
-    NSLog(@"ruleValue:%f",ruleValue);
+- (void)scrollViewDidEndDecelerating:(TXHRulerScrollView *)scrollView {
+    [self animationRebound:scrollView];
+}
+
+- (void)scrollViewDidEndDragging:(TXHRulerScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self animationRebound:scrollView];
+}
+
+- (void)animationRebound:(TXHRulerScrollView *)scrollView {
+    CGFloat offSetX = scrollView.contentOffset.x + self.frame.size.width / 2 - DISTANCELEFTANDRIGHT;
+    CGFloat oX = (offSetX / DISTANCEVALUE) * [scrollView.rulerAverage floatValue];
+#ifdef DEBUG
+    NSLog(@"ago*****************ago:oX:%f",oX);
+#endif
+    if ([self valueIsInteger:scrollView.rulerAverage]) {
+        oX = [self notRounding:oX afterPoint:0];
+    }
+    else {
+        oX = [self notRounding:oX afterPoint:1];
+    }
+#ifdef DEBUG
+    NSLog(@"after*****************after:oX:%.1f",oX);
+#endif
+    CGFloat offX = (oX / ([scrollView.rulerAverage floatValue])) * DISTANCEVALUE + DISTANCELEFTANDRIGHT - self.frame.size.width / 2;
+    [UIView animateWithDuration:.2f animations:^{
+        scrollView.contentOffset = CGPointMake(offX, 0);
+    }];
 }
 
 - (void)drawRacAndLine {
@@ -127,6 +145,33 @@
     
     shapeLayerLine.path = pathLine;
     [self.layer addSublayer:shapeLayerLine];
+}
+
+#pragma mark - tool method
+
+- (CGFloat)notRounding:(CGFloat)price afterPoint:(NSInteger)position {
+    NSDecimalNumberHandler*roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    NSDecimalNumber*ouncesDecimal;
+    NSDecimalNumber*roundedOunces;
+    ouncesDecimal = [[NSDecimalNumber alloc]initWithFloat:price];
+    roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
+    return [roundedOunces floatValue];
+}
+
+- (BOOL)valueIsInteger:(NSNumber *)number {
+    NSString *value = [NSString stringWithFormat:@"%f",[number floatValue]];
+    if (value != nil) {
+        NSString *valueEnd = [[value componentsSeparatedByString:@"."] objectAtIndex:1];
+        NSString *temp = nil;
+        for(int i =0; i < [valueEnd length]; i++)
+        {
+            temp = [valueEnd substringWithRange:NSMakeRange(i, 1)];
+            if (![temp isEqualToString:@"0"]) {
+                return NO;
+            }
+        }
+    }
+    return YES;
 }
 
 @end
