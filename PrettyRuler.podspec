@@ -94,7 +94,7 @@ Pod::Spec.new do |s|
   s.source_files  = "PrettyRuler/PrettyRulerClass/*"
   #  s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "PrettyRuler/PrettyRulerClass/*"
+  s.public_header_files = "PrettyRuler/PrettyRulerClass/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
