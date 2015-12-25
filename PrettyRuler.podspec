@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PrettyRuler"
-  s.version      = "2.1.0"
+  s.version      = "2.1.1"
   s.summary      = "一个漂亮的横向刻度尺自定义控件，用CAShapeLayer实现高效GPU渲染"
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/804145113/PrettyRuler.git", :tag => "2.1.0" }
+  s.source       = { :git => "https://github.com/804145113/PrettyRuler.git", :tag => "2.1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
