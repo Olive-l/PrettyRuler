@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     "CAShapeLayer实现高效GPU渲染，漂亮的自定义横向直尺控件，iOS7以上，刻度最小精度0.1，不足0.5时自减，大于0.5时自增"
                    DESC
 
-  s.homepage     = "https://github.com/804145113/PrettyRuler"
+  s.homepage     = "https://github.com/AsTryE/PrettyRuler"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "7.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
