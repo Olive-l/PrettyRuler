@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/804145113/PrettyRuler.git", :tag => "2.1.1" }
+  s.source       = { :git => "https://github.com/AsTryE/PrettyRuler.git", :tag => "2.1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
