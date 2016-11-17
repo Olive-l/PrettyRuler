@@ -19,9 +19,10 @@ pod 'PrettyRuler', '~> 2.1.1'
 	
 #效果图
 1.最小模式也就是当smallMode = yes。
-
 <video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
-      <source id="mov" src="https://yqall01.baidupcs.com/file/2fae77562f75716b0cabc9a3404ed8e7?bkt=p3-14002fae77562f75716b0cabc9a3404ed8e7c45035610000003ae36f&fid=1595368039-250528-935755121425755&time=1479365781&sign=FDTAXGERBH-DCb740ccc5511e5e8fedcff06b081203-w4JmdwU3zqbxQMXn6stqXqcNi0M%3D&to=yqvb&fm=Yan,B,T,t&sta_dx=3859311&sta_cs=&sta_ft=mov&sta_ct=0&sta_mt=0&fm2=Yangquan,B,T,t&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=14002fae77562f75716b0cabc9a3404ed8e7c45035610000003ae36f&expires=8h&rt=sh&r=214876316&mlogid=7459333203970943262&vuk=1595368039&vbdid=2599916148&fin=%E5%88%BB%E5%BA%A6%E5%B0%BA%E6%98%BE%E7%A4%BA.mov&fn=%E5%88%BB%E5%BA%A6%E5%B0%BA%E6%98%BE%E7%A4%BA.mov&uta=0&rtype=0&iv=2&isw=0&dp-logid=7459333203970943262&dp-callid=0.1.1&hps=1&csl=0&csign=uBTcIgmQqeA3Cwqw1p20m0vnnwY%3D" type="video/mov">
+      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+      <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+      <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
       <p>Your user agent does not support the HTML5 Video element.</p>
     </video>
 
