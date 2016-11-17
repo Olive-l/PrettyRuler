@@ -12,10 +12,13 @@ pod 'PrettyRuler', '~> 2.1.1'
 1. 拖拽class文件夹到你的项目
 2. 在你的控制器里导入 `TXHRrettyRuler.h` 类
 3. 类似以下这段代码
-	TXHRrettyRuler *ruler = [[TXHRrettyRuler alloc] initWithFrame:CGRectMake(20, 220, [UIScreen mainScreen].bounds.size.width - 20 * 2, 140)];
+	  
+	  ```
+	  TXHRrettyRuler *ruler = [[TXHRrettyRuler alloc] initWithFrame:CGRectMake(20, 220, [UIScreen mainScreen].bounds.size.width - 20 * 2, 140)];
 	ruler.rulerDeletate = self;
 	[ruler showRulerScrollViewWithCount:200 average:1 currentValue:36.5f smallMode:YES];
 	[self.view addSubview:ruler];
+	  ```
 	
 #效果图
 
