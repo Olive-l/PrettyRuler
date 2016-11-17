@@ -19,4 +19,4 @@ pod 'PrettyRuler', '~> 2.1.1'
 	
 #效果图
 
-![test](http://cn.office-converter.com/OnlinePHP/download.php?filename=Free-Converter.com-20161117022716-1081943791.gif)
+![test](https://s13.postimg.org/oevwu043r/image.gif)
