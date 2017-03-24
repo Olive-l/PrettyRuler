@@ -3,7 +3,7 @@
 //  PrettyRuler
 //
 //  Created by GXY on 15/12/11.
-//  Copyright © 2015年 Tangxianhai. All rights reserved.
+//  Copyright © 2015年 Olive. All rights reserved.
 //
 
 #import "TXHPulerScrollView.h"
