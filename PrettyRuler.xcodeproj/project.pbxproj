@@ -15,8 +15,8 @@
 		A3069A671C1AA1770000EC2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3069A651C1AA1770000EC2E /* LaunchScreen.storyboard */; };
 		A3069A721C1AA1780000EC2E /* PrettyRulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3069A711C1AA1780000EC2E /* PrettyRulerTests.m */; };
 		A3069A7D1C1AA1780000EC2E /* PrettyRulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3069A7C1C1AA1780000EC2E /* PrettyRulerUITests.m */; };
-		A33881401C2BD9BB00451188 /* TXHRrettyRuler.m in Sources */ = {isa = PBXBuildFile; fileRef = A338813D1C2BD9BB00451188 /* TXHRrettyRuler.m */; };
-		A33881411C2BD9BB00451188 /* TXHRulerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A338813F1C2BD9BB00451188 /* TXHRulerScrollView.m */; };
+		A33881401C2BD9BB00451188 /* TXHPrettyRuler.m in Sources */ = {isa = PBXBuildFile; fileRef = A338813D1C2BD9BB00451188 /* TXHPrettyRuler.m */; };
+		A33881411C2BD9BB00451188 /* TXHPulerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A338813F1C2BD9BB00451188 /* TXHPulerScrollView.m */; };
 		A33881481C2BF72B00451188 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A33881461C2BF72B00451188 /* LICENSE */; };
 		A33881491C2BF72B00451188 /* PrettyRuler.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A33881471C2BF72B00451188 /* PrettyRuler.podspec */; };
 /* End PBXBuildFile section */
@@ -55,10 +55,10 @@
 		A3069A781C1AA1780000EC2E /* PrettyRulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrettyRulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3069A7C1C1AA1780000EC2E /* PrettyRulerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrettyRulerUITests.m; sourceTree = "<group>"; };
 		A3069A7E1C1AA1780000EC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A338813C1C2BD9BB00451188 /* TXHRrettyRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXHRrettyRuler.h; sourceTree = "<group>"; };
-		A338813D1C2BD9BB00451188 /* TXHRrettyRuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXHRrettyRuler.m; sourceTree = "<group>"; };
-		A338813E1C2BD9BB00451188 /* TXHRulerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXHRulerScrollView.h; sourceTree = "<group>"; };
-		A338813F1C2BD9BB00451188 /* TXHRulerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXHRulerScrollView.m; sourceTree = "<group>"; };
+		A338813C1C2BD9BB00451188 /* TXHPrettyRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXHPrettyRuler.h; sourceTree = "<group>"; };
+		A338813D1C2BD9BB00451188 /* TXHPrettyRuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXHPrettyRuler.m; sourceTree = "<group>"; };
+		A338813E1C2BD9BB00451188 /* TXHPulerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXHPulerScrollView.h; sourceTree = "<group>"; };
+		A338813F1C2BD9BB00451188 /* TXHPulerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXHPulerScrollView.m; sourceTree = "<group>"; };
 		A33881461C2BF72B00451188 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		A33881471C2BF72B00451188 /* PrettyRuler.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PrettyRuler.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -156,10 +156,10 @@
 		A338813B1C2BD9BB00451188 /* PrettyRulerClass */ = {
 			isa = PBXGroup;
 			children = (
-				A338813C1C2BD9BB00451188 /* TXHRrettyRuler.h */,
-				A338813D1C2BD9BB00451188 /* TXHRrettyRuler.m */,
-				A338813E1C2BD9BB00451188 /* TXHRulerScrollView.h */,
-				A338813F1C2BD9BB00451188 /* TXHRulerScrollView.m */,
+				A338813C1C2BD9BB00451188 /* TXHPrettyRuler.h */,
+				A338813D1C2BD9BB00451188 /* TXHPrettyRuler.m */,
+				A338813E1C2BD9BB00451188 /* TXHPulerScrollView.h */,
+				A338813F1C2BD9BB00451188 /* TXHPulerScrollView.m */,
 			);
 			path = PrettyRulerClass;
 			sourceTree = "<group>";
@@ -299,9 +299,9 @@
 			files = (
 				A3069A5F1C1AA1770000EC2E /* ViewController.m in Sources */,
 				A3069A5C1C1AA1770000EC2E /* AppDelegate.m in Sources */,
-				A33881411C2BD9BB00451188 /* TXHRulerScrollView.m in Sources */,
+				A33881411C2BD9BB00451188 /* TXHPulerScrollView.m in Sources */,
 				A3069A591C1AA1770000EC2E /* main.m in Sources */,
-				A33881401C2BD9BB00451188 /* TXHRrettyRuler.m in Sources */,
+				A33881401C2BD9BB00451188 /* TXHPrettyRuler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

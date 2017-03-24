@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "TXHRrettyRuler.h"
+#import "TXHPrettyRuler.h"
 
-@interface ViewController () <TXHRrettyRulerDelegate>
+@interface ViewController () <TXHPrettyRulerDelegate>
 
 @end
 
@@ -29,14 +29,16 @@
     [self.view addSubview:showLabel];
     
     // 2.创建 TXHRrettyRuler 对象 并设置代理对象
-    TXHRrettyRuler *ruler = [[TXHRrettyRuler alloc] initWithFrame:CGRectMake(20, 220, [UIScreen mainScreen].bounds.size.width - 20 * 2, 140)];
+    TXHPrettyRuler *ruler = [[TXHPrettyRuler alloc] initWithFrame:CGRectMake(20, 220, [UIScreen mainScreen].bounds.size.width - 20 * 2, 140)];
     ruler.rulerDeletate = self;
-    [ruler showRulerScrollViewWithCount:200 average:[NSNumber numberWithFloat:0.1] currentValue:16.5f smallMode:YES];
+    ruler.unitStr = @"m";
+    ruler.minValue = 1;
+    ruler.maxValue = 20;
     [self.view addSubview:ruler];
 }
 
-- (void)txhRrettyRuler:(TXHRulerScrollView *)rulerScrollView {
-    showLabel.text = [NSString stringWithFormat:@"当前刻度值: %.1f",rulerScrollView.rulerValue];
+- (void)TXHPrettyRulerValue:(CGFloat)value {
+    showLabel.text = [NSString stringWithFormat:@"当前刻度值: %.1f", value];
 }
 
 @end
